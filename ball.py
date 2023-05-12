@@ -17,7 +17,7 @@ class Ball(Turtle):
         self.move_speed_increase = m_s_i    # allows player to play on hard mode which means move_speed is increased by decreasing sleep time between screen updates
     
     def move(self):
-        """Function makes ball move. Direction is dependant on current values of x_move and y_move attributes."""
+        """Method makes ball move. Direction is dependant on current values of x_move and y_move attributes."""
 
         new_x = self.xcor() + self.x_move
         new_y = self.ycor() + self.y_move
@@ -25,12 +25,12 @@ class Ball(Turtle):
         self.goto(new_x, new_y)
     
     def bounce_y(self):
-        """Function makes ball bounce in y axis by changing changing y_move attribute value by multiplying it by -1."""
+        """Method makes ball bounce in y axis by changing changing y_move attribute value by multiplying it by -1."""
 
         self.y_move *= -1
     
     def bounce_x(self):
-        """Function makes ball bounce in x axis by changing changing x_move attribute value by multiplying it by -1."""
+        """Method makes ball bounce in x axis by changing changing x_move attribute value by multiplying it by -1."""
 
         self.x_move *= -1
 
@@ -40,7 +40,7 @@ class Ball(Turtle):
 
 
     def refresh(self):
-        """Function sets ball up in middle of map and changes its x axis direction."""
+        """Method sets ball up in middle of map and changes its x axis direction."""
         self.goto(x = 0, y = 0)
         self.bounce_x()
 

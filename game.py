@@ -28,7 +28,7 @@ class Game:
         self.game_is_on = True
 
     def end_game(self):
-        """Function sets game_is_on attribute value to False. Games stops and player can click to make screen to disappear."""
+        """Method sets game_is_on attribute value to False. Games stops and player can click to make screen to disappear."""
 
         self.game_is_on = False
 

@@ -13,7 +13,8 @@ class Scoreboard(Turtle):
         # setting up attributes values 
         self.l_score = 0
         self.r_score = 0
-
+        
+        # drawing vertical dashed line in middle of screen
         self.mid_line: list [Turtle] = []
         self.middle_line()
 
@@ -22,19 +23,19 @@ class Scoreboard(Turtle):
 
 
     def l_point(self):
-        """Function increases l_score attribute value by 1 and refreshes scoreboard."""
+        """Method increases l_score attribute value by 1 and refreshes scoreboard."""
 
         self.l_score += 1
         self.update_scoreboard()
     
     def r_point(self):
-        """Function increases r_score attribute value by 1 and refreshes scoreboard."""
+        """Method increases r_score attribute value by 1 and refreshes scoreboard."""
         
         self.r_score += 1
         self.update_scoreboard()
     
     def update_scoreboard(self):
-        """Function clears old scoreboard and writes updated."""
+        """Method clears old scoreboard and writes updated."""
 
         self.clear()
         self.goto(-100, 200)
@@ -43,7 +44,7 @@ class Scoreboard(Turtle):
         self.write(self.r_score, align = "center", font = ("Courier", 60, "normal"))
     
     def middle_line(self):
-
+        """Method draws vertical dashed line in middle of the screen."""
 
         for i in range(15):
 
