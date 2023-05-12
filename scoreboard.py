@@ -14,6 +14,9 @@ class Scoreboard(Turtle):
         self.l_score = 0
         self.r_score = 0
 
+        self.mid_line: list [Turtle] = []
+        self.middle_line()
+
         # showing scoreboard
         self.update_scoreboard()
 
@@ -38,3 +41,15 @@ class Scoreboard(Turtle):
         self.write(self.l_score, align = "center", font = ("Courier", 60, "normal"))
         self.goto(100, 200)
         self.write(self.r_score, align = "center", font = ("Courier", 60, "normal"))
+    
+    def middle_line(self):
+
+
+        for i in range(15):
+
+            new_segment = Turtle()
+            new_segment.shape("square")
+            new_segment.shapesize(stretch_wid = 0.5, stretch_len = 0.2)
+            new_segment.color("white")
+            new_segment.penup()
+            new_segment.goto(x = 0, y = -280 + i * 40)
